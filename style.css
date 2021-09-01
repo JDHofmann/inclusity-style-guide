@@ -4,11 +4,29 @@ body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, span, button  {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+	outline: none;
+	border: none;
+	background: none;
 }
 
 section {
 	width: 94%;
 	margin: auto;
+}
+
+.hide {
+	display: none
+}
+.show {
+	display: block
+}
+
+li {
+	list-style: none;
+	/* border: 1px solid;
+	border-bottom: none; */
+	text-align: center;
+	padding-top: .5em;
 }
 
 h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style {
@@ -34,7 +52,7 @@ h1 , .h1-style {
 } */
 
 
-h1.dark, .h1-style.dark, h2.dark, .h2-style.dark, h3.dark, .h3-style.dark, h4.dark, .h4-style.dark {
+h1.dark, .h1-style.dark, h2.dark, .h2-style.dark, h3.dark, .h3-style.dark, h4.dark, .h4-style.dark, p.dark, .p-style.dark {
 	background-color: #3b3b3b;
 	color: #ffffff;
 }
@@ -56,7 +74,35 @@ p, .p-style {
 .flex-row-1-1 {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
+
+.flex-row-1-1 > * {
+	min-width: 50%;
+	text-align: center;
+}
+
+.accordian button {
+	color: #575757;
+	background: #f8f8f8;
+	padding: .5em;
+	width: 100%;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+}
+.accordian > *:not(.accordian-show-content) {
+	display: none;
+}
+
+/* .button-row {
+	width: 100%;
+}
+button {
+	border: 1px solid #3b3b3b;
+	border-radius: 8px;
+	padding: 10px 20px;
+} */
 
 .sm {
 	display: block;
