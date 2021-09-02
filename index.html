@@ -7,14 +7,18 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet"> 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style/main.css">
 	<title>Inclusity Style Guide</title>
 </head>
 <body>
+	<header>
+		<h1>Inclusity Style Guide</h1>
+	</header>
 	<section>
+		<h2>Headings</h2>
 		<div>
 			<div class="flex-row-1-1">
-				<h1>H1 Heading style</h1>
+				<span class="h1-style">H1 Heading style</span>
 				<span class="h1-style dark">H1 Heading style dark</span>
 			</div>
 			<div class="accordian">
@@ -74,6 +78,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section>
 		<div>
 			<div class="flex-row-1-1">
@@ -95,9 +100,23 @@
 		</div>
 	</section>
 	<section>
-		<!-- <div class="button-row">
-			<button>more details</button>
-		</div> -->
+		<h2>Buttons</h2>
+		<div class="button-row">
+			<button class="primary-btn">Primary Button</button>
+		</div>
+		<div class="accordian">
+			<button class="accordian-show-content">Show Details</button>
+			<button class="accordian-hide-content"> Hide Details</button>
+			<div class="accordian-content">
+				<ul>
+					<li class="lg">22px</li>
+					<li class="md">20px</li>
+					<li class="sm">18px</li>
+					<li>400 weight</li>
+					<li>#3b3b3b</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 	<script src="main.js"></script>
 </body>

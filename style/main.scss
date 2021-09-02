@@ -1,0 +1,172 @@
+/* reset */
+@import 'reset';
+@import 'colors';
+
+@import 'mixins';
+
+@import 'headings';
+
+
+
+section {
+	width: 94%;
+	margin: auto;
+}
+
+li {
+	list-style: circle;
+	margin-top: .5em;
+}
+
+
+p, 
+.p-style, 
+li, 
+span, 
+a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: $gray-800;
+}
+
+/* div::before{
+	padding: 2em 0;
+	content: "";
+} */
+
+p, 
+.p-style {
+	line-height: 1.2em;
+	@include dark();
+	&:not(h1, 
+	.h1-style, 
+	h2, 
+	.h2-style, 
+	h3, 
+	.h3-style, 
+	h4, 
+	.h4-style){
+		margin-top: 1em;
+	}
+}
+
+.flex-row-1-1 {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.flex-row-1-1 > * {
+	min-width: 50%;
+	text-align: center;
+}
+
+.accordian {
+	// this should reveal the content slowly top down
+	transition: .5s ease;
+	button {
+		color: $gray-800;
+		background: $gray-100;
+		padding: .5em;
+		width: 100%;
+		font-size: 16px;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		margin-top: .5em;
+	}
+	> *:not(.accordian-show-content) {
+		display: none;
+	}
+}
+
+.button-row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+
+	.primary-btn {
+		border: 1px solid #3b3b3b;
+		border-radius: 8px;
+		padding: 10px 20px;
+		box-shadow: 10px 10px $orange;
+		font-size: 18px;
+		margin: -5px 0 0 -5px;
+		transition: .5s ease;
+		&:hover {
+			box-shadow: 3px 3px $orange;
+			margin: -2px 0 0 -2px;
+		}
+	}
+}
+
+.sm {
+	display: block;
+}
+.md, .lg {
+	display: none;
+}
+
+@media only screen and (min-width: 728px) {
+
+	section {
+		width: 90%;
+		margin: auto;
+	}
+
+	h1 , .h1-style {
+		font-size: 46px;
+	}
+
+	h2 , .h2-style {
+		font-size: 26px;
+	}
+
+	h3 , .h3-style {
+		font-size: 24px;
+	}
+
+	.primary-btn {
+		font-size: 20px;
+	}
+
+	.sm, .lg {
+		display: none;
+	}
+
+	.md {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+
+	section {
+		max-width: 1280px;
+	}
+
+	h1 , .h1-style {
+		font-size: 64px;
+	}
+
+	h2 , .h2-style {
+		font-size: 28px;
+	}
+
+	h3 , .h3-style {
+		font-size: 26px;
+	}
+
+	.primary-btn {
+		font-size: 22px;
+	}
+
+	.md {
+		display: none;
+	}
+
+	.lg {
+		display: block;
+	}
+}

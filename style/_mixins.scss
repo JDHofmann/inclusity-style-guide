@@ -1,0 +1,6 @@
+@mixin dark(){
+	&.dark {
+		background-color: $gray-900;
+		color: $white;
+	}
+}
