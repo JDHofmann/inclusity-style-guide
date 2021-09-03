@@ -62,6 +62,32 @@ p,
 	text-align: center;
 }
 
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	// border: 1px solid $orange;
+}
+
+.color-row {
+	> div {
+		padding: 20px 10px;
+	}
+}
+
 .accordian {
 	// this should reveal the content slowly top down
 	transition: .5s ease;
@@ -127,6 +153,14 @@ p,
 		font-size: 24px;
 	}
 
+	h4 , .h4-style {
+		font-size: 20px;
+	}
+
+	h5 , .h5-style {
+		font-size: 18px;
+	}
+
 	.primary-btn {
 		font-size: 20px;
 	}
@@ -156,6 +190,14 @@ p,
 
 	h3 , .h3-style {
 		font-size: 26px;
+	}
+
+	h4 , .h4-style {
+		font-size: 22px;
+	}
+
+	h5 , .h5-style {
+		font-size: 18px;
 	}
 
 	.primary-btn {

@@ -36,3 +36,20 @@ h3 ,
 	margin-top: .3em;
 }
 
+h4, 
+.h4-style {
+	@include dark();
+	color: $gray-700;
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: .3em;
+}
+
+h5, 
+.h5-style {
+	@include dark();
+	color: $gray-700;
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: .3em;
+}

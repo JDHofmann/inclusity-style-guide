@@ -8,6 +8,38 @@ body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, span, button {
   background: none;
 }
 
+.bg-gray-100 {
+  background-color: #f8f8f8;
+}
+
+.bg-gray-200 {
+  background-color: #e4e4e4;
+}
+
+.bg-gray-300 {
+  background-color: #cccccc;
+}
+
+.bg-gray-500 {
+  background-color: #a6a6a6;
+}
+
+.bg-gray-700 {
+  background-color: #707070;
+}
+
+.bg-gray-800 {
+  background-color: #575757;
+}
+
+.bg-gray-900 {
+  background-color: #3b3b3b;
+}
+
+.bg-orange {
+  background-color: #f7941e;
+}
+
 h1,
 .h1-style,
 h2,
@@ -56,6 +88,34 @@ h3,
 
 h3.dark,
 .h3-style.dark {
+  background-color: #3b3b3b;
+  color: #ffffff;
+}
+
+h4,
+.h4-style {
+  color: #707070;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: .3em;
+}
+
+h4.dark,
+.h4-style.dark {
+  background-color: #3b3b3b;
+  color: #ffffff;
+}
+
+h5,
+.h5-style {
+  color: #707070;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: .3em;
+}
+
+h5.dark,
+.h5-style.dark {
   background-color: #3b3b3b;
   color: #ffffff;
 }
@@ -114,6 +174,44 @@ p,
 .flex-row-1-1 > * {
   min-width: 50%;
   text-align: center;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.color-row > div {
+  padding: 20px 10px;
 }
 
 .accordian {
@@ -187,6 +285,12 @@ p,
   h3, .h3-style {
     font-size: 24px;
   }
+  h4, .h4-style {
+    font-size: 20px;
+  }
+  h5, .h5-style {
+    font-size: 18px;
+  }
   .primary-btn {
     font-size: 20px;
   }
@@ -210,6 +314,12 @@ p,
   }
   h3, .h3-style {
     font-size: 26px;
+  }
+  h4, .h4-style {
+    font-size: 22px;
+  }
+  h5, .h5-style {
+    font-size: 18px;
   }
   .primary-btn {
     font-size: 22px;
