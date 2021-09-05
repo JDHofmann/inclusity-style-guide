@@ -2,10 +2,13 @@
 body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, span, button {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
   outline: none;
   border: none;
   background: none;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 .bg-gray-100 {
@@ -145,11 +148,6 @@ a {
 	padding: 2em 0;
 	content: "";
 } */
-p,
-.p-style {
-  line-height: 1.2em;
-}
-
 p.dark,
 .p-style.dark {
   background-color: #3b3b3b;
@@ -159,6 +157,52 @@ p.dark,
 p,
 .p-style {
   margin-top: 1em;
+}
+
+a,
+.a-style {
+  cursor: pointer;
+  line-height: inherit;
+  margin: inherit;
+  padding: inherit;
+  color: inherit;
+  font-size: 1.05em;
+  -webkit-transition: border .2s ease-in,background-size .2s ease-in;
+  transition: border .2s ease-in,background-size .2s ease-in;
+  background: linear-gradient(120deg, #ffe0c1 0%, #ffe0c1 100%) no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-bottom: 1px solid;
+  color: #0077b3;
+  color: #d77a00;
+  padding-bottom: .1em;
+  text-decoration: none;
+}
+
+a:hover, a:focus,
+.a-style:hover,
+.a-style:focus {
+  background-size: 100% 100%;
+  border-bottom: 0 solid rgba(217, 56, 32, 0.2);
+  color: #575757;
+}
+
+a.dark,
+.a-style.dark {
+  color: #ffb265;
+  background: linear-gradient(120deg, rgba(247, 148, 30, 0.4) 0%, rgba(247, 148, 30, 0.4) 100%) no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0;
+}
+
+a.dark:hover, a.dark:focus,
+.a-style.dark:hover,
+.a-style.dark:focus {
+  background-size: 100% 100%;
+  border-bottom: 0 solid rgba(247, 148, 30, 0.8);
+  color: #f8f8f8;
 }
 
 .flex-row-1-1 {
@@ -252,7 +296,8 @@ p,
   -webkit-box-shadow: 10px 10px #f7941e;
           box-shadow: 10px 10px #f7941e;
   font-size: 18px;
-  margin: -5px 0 0 -5px;
+  -webkit-transform: translate(-5px 5px);
+          transform: translate(-5px 5px);
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -260,7 +305,8 @@ p,
 .button-row .primary-btn:hover {
   -webkit-box-shadow: 3px 3px #f7941e;
           box-shadow: 3px 3px #f7941e;
-  margin: -2px 0 0 -2px;
+  -webkit-transform: translate(-2px 2px);
+          transform: translate(-2px 2px);
 }
 
 .sm {

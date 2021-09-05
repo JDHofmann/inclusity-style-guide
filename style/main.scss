@@ -37,7 +37,7 @@ a {
 
 p, 
 .p-style {
-	line-height: 1.2em;
+	// line-height: 1.2em;
 	@include dark();
 	&:not(h1, 
 	.h1-style, 
@@ -49,6 +49,52 @@ p,
 	.h4-style){
 		margin-top: 1em;
 	}
+}
+
+a,
+.a-style {
+	cursor: pointer;
+	line-height: inherit;
+	margin: inherit;
+	padding:inherit;
+	color: inherit;
+	font-size: 1.05em;
+	// all stolen from prog.com
+	transition: border .2s ease-in,background-size .2s ease-in;
+	// background: linear-gradient(120deg,rgba(0,119,179,.1) 0%,rgba(0,119,179,.1) 100%) no-repeat;
+	background: linear-gradient(120deg,$orange-200 0%,$orange-200 100%) no-repeat;
+	background-position: 0 100%;
+	background-size: 100% 0;
+	transition: .5s;
+	border-bottom: 1px solid;
+	color: #0077b3;
+	color: $orange-800;
+	padding-bottom: .1em;
+	text-decoration: none;
+	&:hover, &:focus {
+		background-size: 100% 100%;
+		border-bottom: 0 solid rgba($red, .2);
+		color: $gray-800;
+	}
+	&.dark {
+		color: $orange-500;
+		background: linear-gradient(120deg,rgba($orange-700,.4) 0%,rgba($orange-700,.4) 100%) no-repeat;
+		background-position: 0 100%;
+		background-size: 100% 0;
+		&:hover, &:focus {
+			background-size: 100% 100%;
+			border-bottom: 0 solid rgba($orange-700, .8);
+			color: $gray-100;
+		}
+	}
+	// position: relative;
+	// &::after {
+	// 	content: "";
+	// 	background: #ff0000;
+	// 	width: 100%;
+	// 	position: absolute;
+	// 	left: 0;
+	// }
 }
 
 .flex-row-1-1 {
@@ -118,11 +164,12 @@ p,
 		padding: 10px 20px;
 		box-shadow: 10px 10px $orange;
 		font-size: 18px;
-		margin: -5px 0 0 -5px;
+		transform: translate(-5px 5px);
 		transition: .5s ease;
 		&:hover {
 			box-shadow: 3px 3px $orange;
-			margin: -2px 0 0 -2px;
+			transform: translate(-2px 2px);
+
 		}
 	}
 }
