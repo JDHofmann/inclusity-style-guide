@@ -101,11 +101,21 @@ a,
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	> * {
+		min-width: 50%;
+		text-align: center;
+	}
 }
 
-.flex-row-1-1 > * {
-	min-width: 50%;
-	text-align: center;
+
+.flex-row-3 {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	> * {
+		min-width: 33.33%;
+		text-align: center;
+	}
 }
 
 .flex-row {
@@ -121,18 +131,8 @@ a,
 	align-items: center;
 }
 
-.circle {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	// border: 1px solid $orange;
-}
+// table styles here
 
-.color-row {
-	> div {
-		padding: 20px 10px;
-	}
-}
 
 .accordian {
 	// this should reveal the content slowly top down
@@ -173,6 +173,22 @@ a,
 		}
 	}
 }
+
+// for use interally on this site
+
+.circle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	// border: 1px solid $orange;
+}
+
+.color-row {
+	> div {
+		padding: 20px 10px;
+	}
+}
+
 
 .sm {
 	display: block;

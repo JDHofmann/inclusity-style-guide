@@ -43,6 +43,34 @@ body, h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, span, button {
   background-color: #f7941e;
 }
 
+.bg-orange-100 {
+  background-color: #ffefe0;
+}
+
+.bg-orange-200 {
+  background-color: #ffe0c1;
+}
+
+.bg-orange-300 {
+  background-color: #ffd0a2;
+}
+
+.bg-orange-500 {
+  background-color: #ffb265;
+}
+
+.bg-orange-700 {
+  background-color: #f7941e;
+}
+
+.bg-orange-800 {
+  background-color: #d77a00;
+}
+
+.bg-orange-900 {
+  background-color: #a95400;
+}
+
 h1,
 .h1-style,
 h2,
@@ -220,6 +248,21 @@ a.dark:hover, a.dark:focus,
   text-align: center;
 }
 
+.flex-row-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-row-3 > * {
+  min-width: 33.33%;
+  text-align: center;
+}
+
 .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,16 +289,6 @@ a.dark:hover, a.dark:focus,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.color-row > div {
-  padding: 20px 10px;
 }
 
 .accordian {
@@ -307,6 +340,16 @@ a.dark:hover, a.dark:focus,
           box-shadow: 3px 3px #f7941e;
   -webkit-transform: translate(-2px 2px);
           transform: translate(-2px 2px);
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.color-row > div {
+  padding: 20px 10px;
 }
 
 .sm {
