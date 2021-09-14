@@ -1,0 +1,36 @@
+.wide-wrap {
+	width: auto;
+	margin: auto;
+	padding: 0 10px;
+	@media only screen and (min-width: 500px) {
+		padding: 0 calc(10.4vw - 42px) ;
+	}
+	@media only screen and (min-width: 1025px) {
+		padding: 0 75px;
+	}
+}
+
+.full-wrap {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.content-wrap {
+	// border: 2px solid #ffcc00;
+	width: auto;
+	margin: auto;
+	padding: 0 10px;
+	@media only screen and (min-width: 500px) {
+		padding: 0 calc(10.4vw - 42px);
+		// max-width: 90%;
+	}
+	@media only screen and (min-width: 1025px) {
+		padding: 0 75px;
+		max-width: 1130px;
+	}
+}
+
+.grid-demo {
+	background: #ffdddd;
+}
