@@ -55,17 +55,14 @@ a,
 	color: inherit;
 	font-size: 1.05em;
 	// all stolen from prog.com
-	transition: border .2s ease-in,background-size .2s ease-in;
-	// background: linear-gradient(120deg,rgba(0,119,179,.1) 0%,rgba(0,119,179,.1) 100%) no-repeat;
-	background: linear-gradient(120deg,$orange-200 0%,$orange-200 100%) no-repeat;
+	background: linear-gradient(120deg,$orange-300 0%,$orange-200 100%) no-repeat;
 	background-position: 0 100%;
 	background-size: 100% 0;
-	transition: .5s;
 	border-bottom: 1px solid;
-	color: #0077b3;
 	color: $orange-800;
 	padding-bottom: .1em;
 	text-decoration: none;
+	transition: border .4s ease-in-out, background-size .4s ease-in-out;
 	&:hover, &:focus {
 		background-size: 100% 100%;
 		border-bottom: 0 solid rgba($red, .2);
@@ -73,13 +70,15 @@ a,
 	}
 	&.dark {
 		color: $orange-500;
-		background: linear-gradient(120deg,rgba($orange-700,.4) 0%,rgba($orange-700,.4) 100%) no-repeat;
+		// background: linear-gradient(120deg, rgba($orange-700,.4) 0%, rgba($orange-700, .4) 100%) no-repeat;
+		background: linear-gradient(120deg, rgba($orange-500, 1) 0%, rgba($orange-500, 1) 100%) no-repeat;
 		background-position: 0 100%;
 		background-size: 100% 0;
 		&:hover, &:focus {
 			background-size: 100% 100%;
-			border-bottom: 0 solid rgba($orange-700, .8);
-			color: $gray-100;
+			border-bottom: 0 solid rgba($orange-500, .8);
+			// color: $gray-100;
+			color: $gray-900;
 		}
 	}
 }
@@ -95,7 +94,7 @@ a,
 	line-height: 1.3;
 	margin: 2em 0 0 3px;
 	overflow: visible;
-	padding: 0 1em;
+	padding: .1em 1em 0;
 	position: relative;
 	text-decoration: none;
 	transition: color .3s ease-in-out;
@@ -112,12 +111,14 @@ a,
 		left: 0;
 		width: 2px;
 		transform: skewX(-10deg);
-		transition: background .3s ease-in-out,width .3s ease-in-out;
+		transition: background .3s ease-in-out, width .3s ease-in-out;
 		z-index: -1;
 	}
-	&:hover {
+	&:hover, &:focus {
+		color: $gray-900;
+		outline: none;
 		&::before {
-			background: rgba($orange-700,.4);
+			background: $orange-300;
 			width: 100%;
 		}
 	}
@@ -190,6 +191,15 @@ a,
 		font-size: 18px;
 		transform: translate(-5px 5px);
 		transition: .5s ease;
+		@include sm() {
+			font-size: 18px;
+		}
+		@include md() {
+			font-size: 20px;
+		}
+		@include lg() {
+			font-size: 22px;
+		}
 		&:hover {
 			box-shadow: 3px 3px $orange;
 			transform: translate(-2px 2px);
@@ -209,60 +219,5 @@ a,
 .color-row {
 	> div {
 		padding: 20px 10px;
-	}
-}
-
-
-@media only screen and (min-width: 728px) {
-
-	h1 , .h1-style {
-		font-size: 46px;
-	}
-
-	h2 , .h2-style {
-		font-size: 26px;
-	}
-
-	h3 , .h3-style {
-		font-size: 24px;
-	}
-
-	h4 , .h4-style {
-		font-size: 20px;
-	}
-
-	h5 , .h5-style {
-		font-size: 18px;
-	}
-
-	.primary-btn {
-		font-size: 20px;
-	}
-}
-
-@media only screen and (min-width: 1025px) {
-
-	h1 , .h1-style {
-		font-size: 64px;
-	}
-
-	h2 , .h2-style {
-		font-size: 28px;
-	}
-
-	h3 , .h3-style {
-		font-size: 26px;
-	}
-
-	h4 , .h4-style {
-		font-size: 22px;
-	}
-
-	h5 , .h5-style {
-		font-size: 18px;
-	}
-
-	.primary-btn {
-		font-size: 22px;
 	}
 }
