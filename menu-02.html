@@ -12,18 +12,22 @@
         <button 
             aria-haspopup="true" 
             aria-expanded="false"
+            data-toggle="dropdown"
         >
         Menu
-        <span aria-hidden="true">&#x25be</span>
+            <span aria-hidden="true">&#x25be</span>
         </button>
-        <div role="menu" hidden>
+        <div
+            class="dropdown-menu" 
+            role="menu" 
+            aria-hidden="true"
+        >
             <button role="menuitem" tabindex="-1">One</button>
             <button role="menuitem" tabindex="-1">Two</button>
             <button role="menuitem" tabindex="-1">Three</button>
         </div>
-
-
     </header>
+    
     <script src="menu-02-src/main.js"></script>
 </body>
 </html>
