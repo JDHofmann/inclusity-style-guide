@@ -4,14 +4,11 @@
 @import 'headings';
 @import 'spacing';
 
-// section {
-// 	width: 94%;
-// 	margin: auto;
-// }
 
 li {
+	padding-left: .5em;
 	list-style: circle;
-	margin-top: .5em;
+	margin: 1em 1.5em 0;
 }
 
 p, 

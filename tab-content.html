@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tab Content Page Layout</title>
+</head>
+<body>
+	<header>Header</header>
+	<main>
+		<div class="banner">
+			<h1>This is the title of this page</h1>
+		</div>
+		<div class="content">
+			<h2>Sub-head, notice it will wrap when the text gets this long</h2>
+			<div class="flex-row-1-1">
+				<p>Sed ut perspiciatis unde omnis <a>link style</a> iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+				<p class="p-style dark">Nemo enim ipsam voluptatem quia voluptas sit aspernatur <span class="a-style dark">link style dark</span>  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+			</div>
+		</div>
+	</main>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		header {
+			width: 100%;
+			height: 75px;
+			text-align: center;
+		}
+		main {
+			/* background: #f8f8f8; */
+			/* background: #e4e4e4; */
+			height: 100vh;
+		}
+		.banner {
+			display: flex;
+			flex-direction: column;
+			padding: 20px 20px;
+			justify-content: start;
+		}
+		h1 {
+			text-align: left;
+		}
+		h2 {
+			font-weight: 700;
+			font-size: 16px;
+			padding: 5px 15px;
+			color: #303030;
+			border-radius: 8px 8px 0 0;
+		}
+		.content {
+			margin: 0 20px;
+			background: #ffffff;
+			color: #303030;
+			border-radius: 8px;
+			/* outline: 1px solid #3b3b3b; */
+			border-left: 15px solid #f7941e;
+			box-shadow: 4px 4px  8px #cccccc;
+		}
+		.content > *:not(h2) {
+			padding: 15px;
+		}
+		p {
+			font-size: 14px;
+		}
+	</style>
+</body>
+
+</html>
